@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" crossorigin="anonymous">	
+		<link rel="stylesheet" href="/assets/css/client.css">	
+	</head>
+
+	<body class="bg-light">
+
+		<!-- *************************************************************** -->
+		<!-- Modal modal_login -->
+	
+			<div class="modal fade" id="modal_login" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Fill an username to enter in the conversation</h5>
+						</div>
+						<div class="modal-body">
+							<input id="pv_user_id" class="form-control" placeholder="Username" aria-label="Username">
+						</div>
+						<div class="modal-footer">
+							<button id="pv_enter_button"  type="button" class="btn btn-primary">Enter</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- *************************************************************** -->
+		<!-- header -->
+
+			<header>
+				<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+					<div class="container">
+						<a class="navbar-brand" href="/">
+							<i class="fas fa-comments"></i>
+							&nbsp;
+							Conversations App
+						</a>
+						<span style="color:white;">
+							<i class="fas fa-comments"></i>
+							&nbsp;
+							<span id="pv_conversation_id"></span>
+							&nbsp;/&nbsp;
+							<i class="fas fa-user"></i>
+							&nbsp;
+							<span id="pv_user_id_banner"></span>
+						</span>
+					</div>
+				</nav>
+			</header>
+		
+		<!-- *************************************************************** -->
+		<!-- main -->
+
+			<main id="pv_main" role="main" class="container" style="padding: 60px 15px 85px 15px;">		
+				<div id="pv_msg_history" style="overflow-y: auto;"></div>
+			</main>
+
+		<!-- *************************************************************** -->
+		<!-- footer -->
+						
+			<footer class="footer mt-auto py-4 bg-light" style="position: fixed;height: 85px;bottom: 0;width: 100%; box-shadow: 0px 0px 5px 2px #00000018;">
+				<div class="container">
+					<div class="input-group">
+						<input id="pv_message" class="form-control" placeholder="">
+						<div class="input-group-append">
+							<button id="pv_send_button"  class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		<!-- *************************************************************** -->
+		<!-- scripts -->
+
+		<!-- vendors -->
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>		
+			<script src="https://unpkg.com/vue"></script>
+		<!-- app -->
+			<script src="/socket.io/socket.io.js"></script>
+			<script src="/assets/js/conversation.js"></script>
+
+	</body>
+</html>
